@@ -1,0 +1,12 @@
+1.Создаем виртуальное окружение python3 -m venv venv
+2. Активируем виртуальное окружение . venv/bin/activate
+3. Устанавливаем нужные библиотеки из файла pip install -r req.txt
+4. Проверяем установились ли нужные библиотеки pip freeze
+5. Проверяем есть ли у нас база данных test2,для этого надо зайти в postgresql ,команда psql ,если нет то создаем CREATE DATABASE test2;
+6. Переходим в данную базу данных \c test2 (Не обязаельное условие)
+7. Связываем проект с базой данных ./manage.py makemigrations , если данная команда не работает то прописываем python manage.py makemigrations
+8. Далее пишем команду ./manage.py migrate или python manage.py migrate
+9. Создаем Superuser  ./manage.py createsuperuser или python ./ manage.py createsuperuser
+10. прописываем необходимые данные такие как Username, Password, далее выбираем Y
+11. Запускаем сервер ./manage.py runserver
+12. Выйти из сервера поможет команда ctrl + Z
